@@ -2,7 +2,8 @@
 pipeline {
     agent none
    stages {     
-    agent docker-agent
+    stage('Maven Install') {
+      agent docker-agent {         
        docker {          
          image 'maven:3.5.0'         
      }       
